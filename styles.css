@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+:root {
+    --dark-gray: #B3C1C2;
+    --gray-selected: #838E8F;
+    --gray-title: #9ca8a9;
+    --gradient: linear-gradient(0deg, rgba(178,193,194,1) 50%, rgba(255,255,255,1) 100%);
+}
+
 html {
     font-size: 62.5%;
 }
@@ -23,7 +30,7 @@ a {
     width: 100%;
     padding: 1rem;
     text-align: center;
-    background-color: #B3C1C2;
+    background-color: var(--dark-gray);
 }
 
 #navbar li {
@@ -37,7 +44,7 @@ a {
 }
 
 #navbar a:hover {
-    color: #838E8F;
+    color: var(--gray-selected);
 }
 
 #welcome-section {
@@ -58,13 +65,35 @@ a {
 #welcome-section h1 {
     text-align: center;
     font-size: 3rem;
-    color: #9ca8a9;
+    color: var(--gray-title);
     margin-top: 1rem;
     margin-bottom: 3rem;
 }
 
+.btn-container {
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.btn-container button {
+    margin: 0.5rem 1rem 0.5rem 1rem;
+    padding: 0.2rem;
+    font-size: 1.4rem;
+    font-family: 'Poppins';
+    background-color: rgba(178,193,194,1);
+    padding: 0.2rem 1rem;
+    border: 1px solid black;
+    border-radius: 1.6rem;
+}
+
+.btn-container button:hover {
+    background-color: var(--gray-selected);
+    cursor: pointer;
+}
+
+
 #projects {
-    background: linear-gradient(0deg, rgba(178,193,194,1) 50%, rgba(255,255,255,1) 100%);
+    background: var(--gradient);
     display: grid;
     gap: 3rem;
     justify-items: center;
@@ -95,7 +124,7 @@ a {
 }
 
 .project-title {
-    color: #838E8F;
+    color: var(--gray-selected);
 }
 
 .project-description {
@@ -109,7 +138,7 @@ a {
 }
 
 .technology {
-    background-color: #B3C1C2;
+    background-color: var(--dark-gray);
     padding: 0.2rem 1rem;
     margin: 1rem;
     border-radius: 1.5rem;
@@ -172,7 +201,7 @@ footer img:hover {
         "project project";
     }
 
-    #projects h2 {
+    #header-projects {
         grid-area: title;
     }
 
@@ -209,7 +238,7 @@ footer img:hover {
         "project project project";
     }
 
-    #projects h2 {
+    #header-projects {
         grid-area: title;
     }
 
